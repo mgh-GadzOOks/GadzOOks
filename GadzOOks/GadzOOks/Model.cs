@@ -8,17 +8,14 @@ namespace GadzOOks
 {
     internal class Model
     {
-        private String _userName;
-        private int _textSpeed;
-        private List<String> _textLog;
+        private String _userName = "first time player";
+        private int _textSpeed = 1;
+        private List<String> _textLog = new List<String>();
+        private String _previousState = "";
 
-        public Model()
-        {
-            _userName = "First time player";
-            _textSpeed = 1;
-        }
+        public Model(){}
 
-        public Model(String userName, int textSpeed)
+        public Model(String userName = "No Name", int textSpeed = 1)
         {
             _userName = userName;
             _textSpeed = textSpeed;
@@ -49,51 +46,69 @@ namespace GadzOOks
 
         static public string promptUser() { return "---------------------------------------------------\n>"; }
 
-        public static string displayText(String Text)
+        public static string displayText(String text)
         {
             char curLetter;
             char nextLetter;
             int j = 0;
             Model model = new Model();
+            bool nextLetterCapital = false;
+            String displayedText;
 
-            using (StringWriter stringWriter = new StringWriter())
+            using (StringWriter sw = new StringWriter())
             {
-                Console.SetOut(stringWriter);
 
-                for (int i = 0; i < Text.Length; i++)
+                for (int i = 0; i < text.Length; i++)
                 {
-                    curLetter = Text[i];
+                    curLetter = text[i];
 
-                    if (!(i >= Text.Length - 1))
-                        nextLetter = Text[i + 1];
+                    if (!(i >= text.Length - 1))
+                        nextLetter = text[i + 1];
                     else
                         nextLetter = '\0';
                     j++;
 
-                    Console.Write(curLetter);
+                    if ((nextLetterCapital && curLetter != ' ' && curLetter != '\n' && curLetter != '\t') ||
+                        (i == 0 && curLetter != ' ' && curLetter != '\n' && curLetter != '\t'))
+                    {
+                        Console.Write(curLetter.ToString().ToUpper());
+                        sw.Write(curLetter.ToString().ToUpper());
+                        nextLetterCapital = false;
+                    }
+                    else
+                    {
+                        Console.Write(curLetter);
+                        sw.Write(curLetter);
+                    }
 
                     if (nextLetter == ' ' && nextLetter != '\0')
-                        if (!model.pause(20, 40, 60))
+                        if (!model.pause(10, 30, 50))
                             continue;
 
                     if ((curLetter == '!' || curLetter == '?' || curLetter == '.') &&
                         (nextLetter != '!' || nextLetter != '?' || nextLetter != '.'))
-                        if (!model.pause(80, 100, 120))
+                    {
+                        if (!model.pause(60, 80, 100))
                             continue;
+                        else
+                            nextLetterCapital = true;
+                    }
 
-                    if (!model.pause(40, 60, 80))
+                    if (!model.pause(20, 40, 60))
                         continue;
 
-                    if (j >= 50 && (curLetter == '!' || curLetter == '?' || curLetter == '.')
-                        && nextLetter == ' ' && nextLetter != '\0')
+                    if (j >= 70 && nextLetter == ' ' && nextLetter != '\0')
                     {
                         Console.WriteLine();
+                        sw.WriteLine();
                         i++;
                         j = 0;
                     }
                 }
-                return stringWriter.ToString();
+                displayedText = sw.ToString();
+                sw.Close();
             }
+            return displayedText;
         }
 
         public void clrScreen() { Console.Clear(); }
@@ -101,12 +116,13 @@ namespace GadzOOks
         public void checkLog()
         {
             clrScreen();
-            Console.WriteLine("Press any key to continue or press ESC to return.");
+            Console.WriteLine("Text Log: Press any key to continue or press ESC to return.");
             foreach (String previousLine in _textLog)
             {
+                Console.WriteLine("---------------------------------------------------");
+                Console.WriteLine(previousLine);
                 if (Console.ReadKey().Key == ConsoleKey.Escape)
                     break;
-                Console.WriteLine(previousLine);
             }
             clrScreen();
         }
@@ -138,13 +154,58 @@ namespace GadzOOks
             }
         }
 
+        public string LDT(string text)
+        {
+            String s = new string(' ', 90);
+            String displayedText = "";
+            if (_previousState.Length > 0)
+                _previousState += new string('\n', 25 - _previousState.Split('\n').Length);
+            Console.SetCursorPosition(0, 25);
+            for(int i = 0; i < 5; i++) { Console.Write(s); }
+            Console.SetCursorPosition(0, 25);
+            displayedText = this.Log(displayText(text));
+            while(Console.KeyAvailable)
+                Console.ReadKey(false);
+            Console.CursorVisible = false;
+            Console.ReadKey();
+            Console.CursorVisible = true;
+            return displayedText;
+        }
+
+        public string LDTwC(string text)
+        {
+            clrScreen();
+            clearPreviousState();
+            String displayedText = "";
+            Console.SetCursorPosition(0, 25);
+            displayedText = this.Log(displayText(text));
+            while (Console.KeyAvailable)
+                Console.ReadKey(false);
+            Console.CursorVisible = false;
+            Console.ReadKey();
+            Console.CursorVisible = true;
+            return displayedText;
+        }
+
+        public void WL(string text)
+        {
+            addToPreviousState(LDT(text));
+        }
+
         public void setUserName(String userName) { _userName = userName; }
-        public String getUserName() { return _userName;}
+        public string getUserName() { return _userName; }
 
         public void setTextSpeed(int textSpeed) { _textSpeed = textSpeed; }
-        public int getTextSpeed() { return _textSpeed;}
+        public int getTextSpeed() { return _textSpeed; }
 
-        public void Log(string text) { _textLog.Add(text); }
+        public string Log(String text) { this._textLog.Insert(0, text); return text; }
         public List<String> getTextLog() { return _textLog; }
+
+        public string addToPreviousState(String previousState) { _previousState += previousState; return previousState; }
+        public string getPreviousState() { return _previousState; }
+
+        public void clearPreviousState() { _previousState = ""; }
+
+        public void restorePreviousState() { Console.Write(_previousState); }
     }
 }

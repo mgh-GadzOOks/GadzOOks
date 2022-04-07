@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace GadzOOks.Character
 {
-    internal class PlayerCharacter
+    internal class PlayerCharacter : IPerson
     {
+
     }
 }

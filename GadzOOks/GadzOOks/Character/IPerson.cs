@@ -8,5 +8,6 @@ namespace GadzOOks.Character
 {
     internal interface IPerson
     {
+
     }
 }

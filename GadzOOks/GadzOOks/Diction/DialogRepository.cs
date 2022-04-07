@@ -15,5 +15,9 @@ namespace GadzOOks
         static public String[] optionsMenuChoices = { "t", "b"};
         static public String[] textSpeedMenuOptions = { "(0) INSTANT", "(1) FAST", "(2) NORMAL", "(3) SLOW" };
         static public String[] textSpeedMenuChoices = { "0", "1", "2", "3" };
+        static public String TutorialWelcome = "Welcome to GadzOOks! This is a fantasy text-based adventure from" +
+                " a first-person perspective. Thank you for testing out my program.";
+        static public String TutorialWelcomeExplanation = "Without further adieu lets start by creating the" +
+                " character you will be using throughout this adventure.";
     }
 }
