@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\MichaelH\\source\\repos\\GadzOOks\\GadzOOks\\GadzOOks.csproj": {}
+    "C:\\Users\\MichaelH\\Source\\Repos\\GadzOOksGit\\GadzOOks\\GadzOOks\\GadzOOks.csproj": {}
   },
   "projects": {
-    "C:\\Users\\MichaelH\\source\\repos\\GadzOOks\\GadzOOks\\GadzOOks.csproj": {
+    "C:\\Users\\MichaelH\\Source\\Repos\\GadzOOksGit\\GadzOOks\\GadzOOks\\GadzOOks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\MichaelH\\source\\repos\\GadzOOks\\GadzOOks\\GadzOOks.csproj",
+        "projectUniqueName": "C:\\Users\\MichaelH\\Source\\Repos\\GadzOOksGit\\GadzOOks\\GadzOOks\\GadzOOks.csproj",
         "projectName": "GadzOOks",
-        "projectPath": "C:\\Users\\MichaelH\\source\\repos\\GadzOOks\\GadzOOks\\GadzOOks.csproj",
+        "projectPath": "C:\\Users\\MichaelH\\Source\\Repos\\GadzOOksGit\\GadzOOks\\GadzOOks\\GadzOOks.csproj",
         "packagesPath": "C:\\Users\\MichaelH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\MichaelH\\source\\repos\\GadzOOks\\GadzOOks\\obj\\",
+        "outputPath": "C:\\Users\\MichaelH\\Source\\Repos\\GadzOOksGit\\GadzOOks\\GadzOOks\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
