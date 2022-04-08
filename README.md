@@ -43,7 +43,8 @@ Example game text being displayed
  - Player avatar is equally important to environment because it is the tether to and view point for logical game world.
  - Player avatar properties and methods (?)
 	 - What makes up the player? What can be delegated to other entities?
-	 - How does an avatar interact with the environment? How and by what is this conveyed to the player? 
+	 - How does an avatar interact with the environment? How and by what is this conveyed to the player?
+	 - Inspect(environment/actor/object) (maybe it's own class depending on scope) The eyes of the avatar take in the environment/actor/object.
  - Environment properties and methods (?)
 	 - What makes up the environment? What can be delegated to other entities?
 	 - What can the environment do?
