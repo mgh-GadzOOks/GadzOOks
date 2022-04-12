@@ -8,25 +8,23 @@ namespace GadzOOks
 {
     internal class Model
     {
-        private String _userName = "first time player";
-        private int _textSpeed = 1;
-        private List<String> _textLog = new List<String>();
-        private String _previousState = "";
+        public string _userName { get; set; }
+        public short _textSpeed { get; set;}
+        private List<string> _textLog = new List<string>();
+        private string _previousState = "";
 
-        public Model(){}
-
-        public Model(String userName = "No Name", int textSpeed = 1)
+        public Model()
         {
-            _userName = userName;
-            _textSpeed = textSpeed;
+            _userName = "first time player";
+            _textSpeed = 0;
         }
 
-        public string generateLimitedMenu(String[] options)
+        public string generateLimitedMenu(string[] options)
         {
-            String menu = "";
+            string menu = "";
 
             if (options.Length > 0)
-                for (int i = 0; i < options.Length; i++)
+                for (short i = 0; i < options.Length; i++)
                 {
                     menu += options[i] + "\n";
                 }
@@ -36,9 +34,9 @@ namespace GadzOOks
             return menu;
         }
 
-        public string promptUser(String basePrompt)
+        public string promptUser(string basePrompt)
         {
-            String prompt = "---------------------------------------------------\n";
+            string prompt = "---------------------------------------------------\n";
             prompt += basePrompt + "\n> ";
 
             return prompt;
@@ -46,18 +44,18 @@ namespace GadzOOks
 
         static public string promptUser() { return "---------------------------------------------------\n>"; }
 
-        public string displayText(String text)
+        public string displayText(string text)
         {
             char curLetter;
             char nextLetter;
-            int j = 0;
+            short j = 0;
             bool nextLetterCapital = false;
-            String displayedText;
+            string displayedText;
 
             using (StringWriter sw = new StringWriter())
             {
 
-                for (int i = 0; i < text.Length; i++)
+                for (short i = 0; i < text.Length; i++)
                 {
                     curLetter = text[i];
 
@@ -110,7 +108,7 @@ namespace GadzOOks
             return displayedText;
         }
 
-        public bool pause(int fast, int normal, int slow)
+        public bool pause(short fast, short normal, short slow)
         {
             switch (_textSpeed)
             {
@@ -126,8 +124,8 @@ namespace GadzOOks
 
         public string LDT(string text)
         {
-            String s = new string(' ', 90);
-            String displayedText = "";
+            string s = new string(' ', 90);
+            string displayedText = "";
             clearPreviousState();
             Console.SetCursorPosition(0, 25);
             for(int i = 0; i < 5; i++) { Console.Write(s); }
@@ -142,7 +140,7 @@ namespace GadzOOks
         {
             clrScreen();
             clearPreviousState();
-            String displayedText = "";
+            string displayedText = "";
             Console.SetCursorPosition(0, 25);
             displayedText = this.Log(displayText(text));
             addToPreviousState(displayedText);
@@ -156,7 +154,7 @@ namespace GadzOOks
                 Console.ReadKey(false);
             Console.CursorVisible = false;
             ConsoleKeyInfo cki = Console.ReadKey();
-            if (cki.Key == ConsoleKey.Escape)
+            if (cki.Key == ConsoleKey.P)
             {
                 pauseOrMainMenu("Pause Menu", "Continue");
                 restorePreviousState();
@@ -173,11 +171,11 @@ namespace GadzOOks
             
         }
 
-        public void pauseOrMainMenu(String menuName, String displaySorC)
+        public void pauseOrMainMenu(string menuName, string displaySorC)
         {
             bool mainMenuOpen = true;
             bool goToOptionsMenu = false;
-            String choice;
+            string choice;
 
             while (mainMenuOpen)
             {
@@ -227,7 +225,7 @@ namespace GadzOOks
                             Console.WriteLine(DR.menuHeaderText["Options"]);
                             Console.Write(generateLimitedMenu(DR.textSpeedMenuOptions));
                             Console.Write(promptUser(DR.menuInstructions));
-                            setTextSpeed(Int32.Parse(Controller.limitedUserInput(DR.textSpeedMenuChoices)));
+                            _textSpeed = short.Parse(Controller.limitedUserInput(DR.textSpeedMenuChoices));
                             break;
                         case "b":
                             goToOptionsMenu = false;
@@ -242,19 +240,13 @@ namespace GadzOOks
 
         public void clrScreen() { Console.Clear(); }
 
-        public void setUserName(String userName) { _userName = userName; }
-        public string getUserName() { return _userName; }
-
-        public void setTextSpeed(int textSpeed) { _textSpeed = textSpeed; }
-        public int getTextSpeed() { return _textSpeed; }
-
-        public string Log(String text) { this._textLog.Insert(0, text); return text; }
-        public List<String> getTextLog() { return _textLog; }
+        public string Log(string text) { this._textLog.Insert(0, text); return text; }
+        public List<string> getTextLog() { return _textLog; }
         public void checkLog()
         {
             clrScreen();
             Console.WriteLine("Text Log: Press any key to continue or press ESC to return.");
-            foreach (String previousLine in _textLog)
+            foreach (string previousLine in _textLog)
             {
                 Console.WriteLine("---------------------------------------------------");
                 Console.WriteLine(previousLine);
@@ -265,11 +257,9 @@ namespace GadzOOks
             restorePreviousState();
         }
 
-        public string addToPreviousState(String previousState) { _previousState += previousState; return previousState; }
+        public string addToPreviousState(string previousState) { _previousState += previousState; return previousState; }
         public string getPreviousState() { return _previousState; }
-
         public void clearPreviousState() { _previousState = ""; }
-
         public void restorePreviousState() { clrScreen(); Console.SetCursorPosition(0, 25);  Console.Write(_previousState); }
     }
 }

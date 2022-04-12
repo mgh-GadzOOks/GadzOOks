@@ -13,16 +13,16 @@ namespace GadzOOks
         { 
         }
 
-        static public string limitedUserInput(String[] options)
+        static public string limitedUserInput(string[] options)
         {
             bool validInput = false;
-            String userInput = "";
+            string userInput = "";
 
             while (!validInput)
             {
                 userInput = Console.ReadLine();
 
-                foreach (String option in options)
+                foreach (string option in options)
                     if ((userInput.ToLower()).Equals(option))
                     {
                         validInput = true;
@@ -33,12 +33,13 @@ namespace GadzOOks
                 if (!validInput)
                 {
                     Console.Write("Please enter one of the valid options: ");
-                    for (int i = 0; i < options.Length; i++)
+                    for (short i = 0; i < options.Length; i++)
                     {
                         if (i < options.Length - 1)
                             Console.Write(options[i] + ", ");
                         else
                         {
+                            Console.Write("or ");
                             Console.WriteLine(options[i]);
                         }
                        
