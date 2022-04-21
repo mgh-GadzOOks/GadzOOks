@@ -1,3 +1,5 @@
+
+
 # GadzOOks
 Object-oriented text-based adventure
 
@@ -23,7 +25,7 @@ Object-oriented text-based adventure
 >4/8/2022
 
 Splash Screen (all ASCII art text generated from [patorjk.com](https://patorjk.com/software/taag/#p=display&f=Big&t=))
-![Splash Screen](https://cdn.discordapp.com/attachments/961987111941181601/961987131226607646/unknown.png)
+![Splash Screen](/Images/SplashScreen.png)
 
 Main Menu and general limited menu validation example
 ![Main Menu](https://cdn.discordapp.com/attachments/961987111941181601/961989177040326726/unknown.png)
