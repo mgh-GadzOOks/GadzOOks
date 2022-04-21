@@ -58,10 +58,14 @@ Text log (displayed by hitting "L" key after above text)
 	 - What makes up the environment? What can be delegated to other entities?
 	 - What can the environment do?
 
-## DOXY DOCUMENTATION
+## DOXYGEN DOCUMENTATION
 
 >4/21/2022
-[HTML via Github files](https://raw.githack.com/mgh-GadzOOks/GadzOOks_CS_Console/master/Doxygen_Documentation/html/index.html)
+
+Pulled from `Doxygen_Documentation`.
+Doxygen looks at the specifically formatted comments I have made and automatically generates formatted documentation.
+[https://raw.githack.com/](https://raw.githack.com/)  allows the below link to open `Doxygen_Documentation/html/Index.html`
+[HTML Documentation Webpage](https://raw.githack.com/mgh-GadzOOks/GadzOOks_CS_Console/master/Doxygen_Documentation/html/index.html)
 
 
 > Written with [StackEdit](https://stackedit.io/).
