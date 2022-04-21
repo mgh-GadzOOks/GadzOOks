@@ -62,9 +62,9 @@ Text log (displayed by hitting "L" key after above text)
 
 >4/21/2022
 
-Pulled from `Doxygen_Documentation`.
 Doxygen looks at the specifically formatted comments I have made and automatically generates formatted documentation.
-[https://raw.githack.com/](https://raw.githack.com/)  allows the below link to open `Doxygen_Documentation/html/Index.html`
+[https://raw.githack.com/](https://raw.githack.com/)  is being used to allow the below link to open `Doxygen_Documentation/html/index.html` from this repository.
+
 [HTML Documentation Webpage](https://raw.githack.com/mgh-GadzOOks/GadzOOks_CS_Console/master/Doxygen_Documentation/html/index.html)
 
 
