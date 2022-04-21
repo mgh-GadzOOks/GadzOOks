@@ -58,4 +58,10 @@ Text log (displayed by hitting "L" key after above text)
 	 - What makes up the environment? What can be delegated to other entities?
 	 - What can the environment do?
 
+## DOXY DOCUMENTATION
+
+>4/21/2022
+[HTML via Github files](https://raw.githack.com/mgh-GadzOOks/GadzOOks_CS_Console/master/Doxygen_Documentation/html/index.html)
+
+
 > Written with [StackEdit](https://stackedit.io/).
