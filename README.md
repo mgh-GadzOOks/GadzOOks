@@ -28,21 +28,21 @@ Splash Screen (all ASCII art text generated from [patorjk.com](https://patorjk.c
 ![Splash Screen](/Images/SplashScreen.png)
 
 Main Menu and general limited menu validation example
-![Main Menu](https://cdn.discordapp.com/attachments/961987111941181601/961989177040326726/unknown.png)
+![Main Menu](/Images/MainMenu.png)
 
 Options menu screens
-![Main Options Menu](https://cdn.discordapp.com/attachments/961987111941181601/961990282113581097/unknown.png)
-![Text Speed Options Menu](https://cdn.discordapp.com/attachments/961987111941181601/961990866279485470/unknown.png)
+![Main Options Menu](/Images/MainOptionsMenu.png)
+![Text Speed Options Menu](/Images/TextSpeedOptionsMenu.png)
 
 Example game text being displayed
-![Game Text](https://cdn.discordapp.com/attachments/961987111941181601/961991613985484830/unknown.png)
+![Game Text](/Images/GameText.png)
 
 Pause menu (displayed by hitting "P" key after above text)
-![Pause Menu](https://cdn.discordapp.com/attachments/961987111941181601/962048307604095067/unknown.png)
+![Pause Menu](/Images/PauseMenu.png)
 
 Text log (displayed by hitting "L" key after above text)
 (text is displayed from most recently logged to oldest)
-![Text Log](https://cdn.discordapp.com/attachments/961987111941181601/962048925412511784/unknown.png)
+![Text Log](/Images/TextLog.png)
 
 ## CONCEPTUALIZATION NOTES
 
