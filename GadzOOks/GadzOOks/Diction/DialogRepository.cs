@@ -8,7 +8,7 @@ namespace GadzOOks
 {
 
     /// <summary>
-    /// Dialog Repository: used to hold string to be displayed.
+    /// Dialog Repository: Hold strings to be displayed.
     /// 
     /// Any scripted text or text which will be reused and displayed
     /// to the user is stored here to be called with a dot property call.

@@ -9,7 +9,7 @@ namespace GadzOOks
 {
 
     /// <summary>
-    /// To deal with any incoming user input.
+    /// Deals with any incoming user inertaction.
     /// 
     /// validates and parses user input.
     /// </summary>

@@ -8,7 +8,7 @@ namespace GadzOOks.Objects
 {
 
     /// <summary>
-    /// For locations in the fictional world of the game.
+    /// Locations in the fictional world of the game.
     /// 
     /// To create and hold the state of the current environment
     /// which where the user is in the game.

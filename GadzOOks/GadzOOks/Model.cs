@@ -8,7 +8,7 @@ namespace GadzOOks
 {
 
     /// <summary>
-    /// For the updating and generating of game system states.
+    /// Updates and generates game system states.
     /// </summary>
     class Model
     {
