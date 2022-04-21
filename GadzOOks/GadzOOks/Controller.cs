@@ -7,7 +7,13 @@ using GadzOOks;
 
 namespace GadzOOks
 {
-    internal class Controller
+
+    /// <summary>
+    /// To deal with any incoming user input.
+    /// 
+    /// validates and parses user input.
+    /// </summary>
+    class Controller
     {
         public Controller()
         { 

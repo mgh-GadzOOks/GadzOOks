@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace GadzOOks
 {
-    internal class DR
+
+    /// <summary>
+    /// Dialog Repository: used to hold string to be displayed.
+    /// 
+    /// Any scripted text or text which will be reused and displayed
+    /// to the user is stored here to be called with a dot property call.
+    /// </summary>
+    class DR
     {
         static public string splashScreenText = @"      ___           ___          _____          ___           ___           ___           ___           ___              
      /  /\         /  /\        /  /::\        /  /\         /  /\         /  /\         /__/|         /  /\             

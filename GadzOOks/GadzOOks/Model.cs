@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace GadzOOks
 {
-    internal class Model
+
+    /// <summary>
+    /// For the updating and generating of game system states.
+    /// </summary>
+    class Model
     {
         public string _userName { get; set; }
         public short _textSpeed { get; set;}
