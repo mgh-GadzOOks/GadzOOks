@@ -57,6 +57,10 @@ Text log (displayed by hitting "L" key after above text)
  - Environment properties and methods (?)
 	 - What makes up the environment? What can be delegated to other entities?
 	 - What can the environment do?
+	 > 4/21/2022
+	 
+	 - Environment is made with a 2D array property which makes up the area of the environment
+	 - Array elements of the area hold information on the ground that makes up that area (grass, wood floor, etc.) and what is on that tile (lamp, chair, monster, etc.)
 
 ## DOXYGEN DOCUMENTATION
 
