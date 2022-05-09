@@ -17,12 +17,22 @@ namespace GadzOOks
         private List<string> _textLog = new List<string>();
         private string _previousState = "";
 
+        /// <summary>
+        /// Default constructor
+        /// </summary>
         public Model()
         {
             _userName = "first time player";
             _textSpeed = 0;
         }
 
+        /// <summary>
+        /// Creates formatted menu to display what choices the user can type.
+        /// 
+        /// Works alongside <see cref="limitedUserInput(string[])"/>.
+        /// </summary>
+        /// <param name="options">Holds string options to be displayed to user as choices.</param>
+        /// <returns>Formatted menu to be displayed.</returns>
         public string generateLimitedMenu(string[] options)
         {
             string menu = "";
@@ -38,6 +48,13 @@ namespace GadzOOks
             return menu;
         }
 
+        /// <summary>
+        /// Creates seperator between menu or screen central info and line to enter input (with instructional prompt).
+        /// 
+        /// Helps to clearly show when user input is expected.
+        /// </summary>
+        /// <param name="basePrompt">Simple instructions on what is expected to be typed</param>
+        /// <returns>Entire prompt to be displayed.</returns>
         public string promptUser(string basePrompt)
         {
             string prompt = "---------------------------------------------------\n";
@@ -46,8 +63,19 @@ namespace GadzOOks
             return prompt;
         }
 
+        /// <summary>
+        /// Creates seperator between menu or screen central info and line to enter input (without instructional prompt).
+        /// </summary>
+        /// <returns>Seperator line</returns>
         static public string promptUser() { return "---------------------------------------------------\n>"; }
 
+        /// <summary>
+        /// For displaying story or game related text at user preferred speed for easier reading.
+        /// 
+        /// Works alongside <see cref="LDT(string)"/> and <see cref="LDTwC(string)"/>.
+        /// </summary>
+        /// <param name="text">Text to be displayed.</param>
+        /// <returns>Parameter text to be stored for later use.</returns>
         public string displayText(string text)
         {
             char curLetter;
@@ -112,6 +140,16 @@ namespace GadzOOks
             return displayedText;
         }
 
+        /// <summary>
+        /// Dictates the amount of time in milliseconds that the system should pause between displaying text.
+        /// 
+        /// If _textspeed is set to 0, text has no pause.
+        /// Works alongside <see cref="displayText(string)"/>
+        /// </summary>
+        /// <param name="fast">Slightly arbitrary speed of text if the user set their _textspeed to be 1.</param>
+        /// <param name="normal">Slightly arbitrary speed of text if the user set their _textspeed to be 2.</param>
+        /// <param name="slow">Slightly arbitrary speed of text if the user set their _textspeed to be 3.</param>
+        /// <returns>Verification (true) that text has been paused.</returns>
         public bool pause(short fast, short normal, short slow)
         {
             switch (_textSpeed)
@@ -126,6 +164,21 @@ namespace GadzOOks
             return true;
         }
 
+        /// <summary>
+        /// Stands for Log and Display Text.
+        /// 
+        /// Clears previously displayed game/story text.
+        /// Correctly places cursor for where to display text.
+        /// Logs the displayed text to be viewed later.
+        /// Saves the fact that this is the current text displayed.
+        /// Waits for user input to continue to next lines of text.
+        /// <seealso cref="clearPreviousState()"/>
+        /// <seealso cref="Log(string)"/>
+        /// <seealso cref="addToPreviousState(string)"/>
+        /// <seealso cref="RK()"/>
+        /// </summary>
+        /// <param name="text">Text to be displayed.</param>
+        /// <returns>Text that was displayed.</returns>
         public string LDT(string text)
         {
             string s = new string(' ', 90);
@@ -140,6 +193,14 @@ namespace GadzOOks
             return displayedText;
         }
 
+        /// <summary>
+        /// Stands for Log and Display Text with Clear.
+        /// 
+        /// Preforms same tasks as LDT but clears the screen first.
+        /// <seealso cref="LDT(string)"/>
+        /// </summary>
+        /// <param name="text">Text to be displayed.</param>
+        /// <returns>Text that was displayed.</returns>
         public string LDTwC(string text)
         {
             clrScreen();
@@ -152,6 +213,14 @@ namespace GadzOOks
             return displayedText;
         }
 
+        /// <summary>
+        /// Stands for Read Key
+        /// Pauses the screen until the user enters any key, then continues to next lines.
+        /// If the user presses P: bring's up pause menu.
+        /// If the user presses L: bring's up log of previously displayed text.
+        /// Upon exiting either, returns the console screen to showing what
+        /// was on screen before hitting P or L.
+        /// </summary>
         public void RK()
         {
             while (Console.KeyAvailable)
@@ -175,6 +244,14 @@ namespace GadzOOks
             
         }
 
+        /// <summary>
+        /// Changes the console screen to display game menu.
+        /// 
+        /// Main menu displayed when the game starts.
+        /// Pause menu displayed when game state interrupted for game menu.
+        /// </summary>
+        /// <param name="menuName">For swapping what ascii art menu name displays (Start or Continue).</param>
+        /// <param name="displaySorC">For swapping what options appear to choose from in the menu.</param>
         public void pauseOrMainMenu(string menuName, string displaySorC)
         {
             bool mainMenuOpen = true;
@@ -244,8 +321,17 @@ namespace GadzOOks
 
         public void clrScreen() { Console.Clear(); }
 
+        /// <summary>
+        /// For storing previously displayed game text for later viewing
+        /// </summary>
+        /// <param name="text">Text to be logged.</param>
+        /// <returns>Text is returned to be displayed after being logged.</returns>
         public string Log(string text) { this._textLog.Insert(0, text); return text; }
         public List<string> getTextLog() { return _textLog; }
+
+        /// <summary>
+        /// Displays each group of previously displayed text in reverse order.
+        /// </summary>
         public void checkLog()
         {
             clrScreen();

@@ -6,7 +6,7 @@ var annotated_dup =
       ] ],
       [ "Controller", "class_gadz_o_oks_1_1_controller.html", null ],
       [ "DR", "class_gadz_o_oks_1_1_d_r.html", null ],
-      [ "Model", "class_gadz_o_oks_1_1_model.html", null ],
+      [ "Model", "class_gadz_o_oks_1_1_model.html", "class_gadz_o_oks_1_1_model" ],
       [ "View", "class_gadz_o_oks_1_1_view.html", null ]
     ] ]
 ];

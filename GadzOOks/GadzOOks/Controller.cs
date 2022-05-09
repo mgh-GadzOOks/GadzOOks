@@ -18,7 +18,15 @@ namespace GadzOOks
         public Controller()
         { 
         }
-
+        /// <summary>
+        /// Automates taking in user input from a limited list of options.
+        /// 
+        /// Makes sure that user can only type in options given in an array of strings.
+        /// Repeats options and asks for re-entry if option typed is invalid.
+        /// Works alongside <see cref="generateLimitedMenu(string[])"/>.
+        /// </summary>
+        /// <param name="options">Takes in options to limit what the user can choose from.</param>
+        /// <returns>The user's input so that it can be processed by whoever called it.</returns>
         static public string limitedUserInput(string[] options)
         {
             bool validInput = false;
@@ -28,13 +36,16 @@ namespace GadzOOks
             {
                 userInput = Console.ReadLine();
 
-                foreach (string option in options)
-                    if ((userInput.ToLower()).Equals(option))
-                    {
-                        validInput = true;
-                        userInput = option;
-                        continue;
-                    }
+                if (userInput != null)
+                {
+                    foreach (string option in options)
+                        if ((userInput.ToLower()).Equals(option))
+                        {
+                            validInput = true;
+                            userInput = option;
+                            continue;
+                        }
+                }
 
                 if (!validInput)
                 {

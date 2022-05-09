@@ -4,7 +4,7 @@ using GadzOOks;
 namespace GadzOOks
 {
     /// <summary>
-    /// Displays text systems output to the user.
+    /// Displays text system's output to the user.
     /// 
     /// Where the program starts and where all output to the screen should be called and updated.
     /// </summary>

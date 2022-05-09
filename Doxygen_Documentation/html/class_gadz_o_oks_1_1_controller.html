@@ -105,14 +105,51 @@ $(document).ready(function(){initNavTree('class_gadz_o_oks_1_1_controller.html',
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a4baba41dfaa3e562c95881c4159b7f49"><td class="memItemLeft" align="right" valign="top"><a id="a4baba41dfaa3e562c95881c4159b7f49" name="a4baba41dfaa3e562c95881c4159b7f49"></a>
-static string&#160;</td><td class="memItemRight" valign="bottom"><b>limitedUserInput</b> (string[] options)</td></tr>
+<tr class="memitem:a4baba41dfaa3e562c95881c4159b7f49"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gadz_o_oks_1_1_controller.html#a4baba41dfaa3e562c95881c4159b7f49">limitedUserInput</a> (string[] options)</td></tr>
+<tr class="memdesc:a4baba41dfaa3e562c95881c4159b7f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automates taking in user input from a limited list of options.  <a href="class_gadz_o_oks_1_1_controller.html#a4baba41dfaa3e562c95881c4159b7f49">More...</a><br /></td></tr>
 <tr class="separator:a4baba41dfaa3e562c95881c4159b7f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Deals with any incoming user inertaction. </p>
 <p >validates and parses user input. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4baba41dfaa3e562c95881c4159b7f49" name="a4baba41dfaa3e562c95881c4159b7f49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4baba41dfaa3e562c95881c4159b7f49">&#9670;&nbsp;</a></span>limitedUserInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string GadzOOks.Controller.limitedUserInput </td>
+          <td>(</td>
+          <td class="paramtype">string[]&#160;</td>
+          <td class="paramname"><em>options</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Automates taking in user input from a limited list of options. </p>
+<p >Makes sure that user can only type in options given in an array of strings. Repeats options and asks for re-entry if option typed is invalid. Works alongside generateLimitedMenu(string[]). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">options</td><td>Takes in options to limit what the user can choose from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The user's input so that it can be processed by whoever called it.</dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
