@@ -214,7 +214,8 @@ namespace GadzOOks
         }
 
         /// <summary>
-        /// Stands for Read Key
+        /// Stands for Read Key.
+        /// 
         /// Pauses the screen until the user enters any key, then continues to next lines.
         /// If the user presses P: bring's up pause menu.
         /// If the user presses L: bring's up log of previously displayed text.
