@@ -1,24 +1,16 @@
-
-
 # GadzOOks
-Object-oriented text-based adventure
+Object-oriented text-based adventure. My (Michael Hopper) personal project, designed to implement and combine a variety of programming concepts I know. Furthermore, as an opportunity to learn new concepts to solve problems, increase my understanding of C#, Github, and to have a practical practice for planning and documentation. Intention is not to have a designated end goal, but to be highly scalable, procedural and to continue adding features and complexity as desired. Created first as a console application to limit focus on UI and concentrate on code, objects, and logic, plan to create mobile app and windows form versions.
 
-## COMPLETED AND TO-DOS
-> 4/8/2022
- - [X] Splash screen which leads to a main menu
- - [X] Main menu with options and quit.
- - [X] Letter entry, which is validated, for user input on limited menus.
- - [X] Text which can be displayed at different speeds.
- - [X] Ability to open a menu (pause menu) with options and quit between screens of text being displayed.
- - [X] Ability to open a log of previously displayed text between screens of text being displayed.
- - [X] Game text displayed at bottom of pre-sized console window, allowing space for other relevant diagrams or text to be displayed on the top half.
- - [ ] System to take in and validate user made colloquial text.
- - [ ] Player avatar to control and interact with text based environment and actors through.
- - [ ] Tutorial and user entry of player avatar basic information
- - [ ] Environment system.
- - [ ] Actors and objects.
- - [ ] Environment and actor response to player interaction.
- - [ ] System by which information from player, environments, objects, and actors are colloquialized and displayed in text.
+> Updated 5/9/2022
+
+## DOXYGEN DOCUMENTATION
+
+>4/21/2022
+
+Doxygen looks at the specifically formatted comments I have made and automatically generates formatted documentation.
+[https://raw.githack.com/](https://raw.githack.com/)  is being used to allow the below link to open `Doxygen_Documentation/html/index.html` from this repository.
+
+[HTML Documentation Webpage](https://raw.githack.com/mgh-GadzOOks/GadzOOks_CS_Console/master/Doxygen_Documentation/html/index.html)
 
 ## PROGRESS PICTURES
 
@@ -44,6 +36,23 @@ Text log (displayed by hitting "L" key after above text)
 (text is displayed from most recently logged to oldest)
 ![Text Log](/Images/TextLog.png)
 
+## COMPLETED AND TO-DOS
+> 4/8/2022
+ - [X] Splash screen which leads to a main menu
+ - [X] Main menu with options and quit.
+ - [X] Letter entry, which is validated, for user input on limited menus.
+ - [X] Text which can be displayed at different speeds.
+ - [X] Ability to open a menu (pause menu) with options and quit between screens of text being displayed.
+ - [X] Ability to open a log of previously displayed text between screens of text being displayed.
+ - [X] Game text displayed at bottom of pre-sized console window, allowing space for other relevant diagrams or text to be displayed on the top half.
+ - [ ] System to take in and validate user made colloquial text.
+ - [ ] Player avatar to control and interact with text based environment and actors through.
+ - [ ] Tutorial and user entry of player avatar basic information
+ - [ ] Environment system.
+ - [ ] Actors and objects.
+ - [ ] Environment and actor response to player interaction.
+ - [ ] System by which information from player, environments, objects, and actors are colloquialized and displayed in text.
+
 ## CONCEPTUALIZATION NOTES
 
 >4/8/2022
@@ -61,15 +70,8 @@ Text log (displayed by hitting "L" key after above text)
 	 
 	 - Environment is made with a 2D array property which makes up the area of the environment
 	 - Array elements of the area hold information on the ground that makes up that area (grass, wood floor, etc.) and what is on that tile (lamp, chair, monster, etc.)
+	> 5/9/2022
 
-## DOXYGEN DOCUMENTATION
-
->4/21/2022
-
-Doxygen looks at the specifically formatted comments I have made and automatically generates formatted documentation.
-[https://raw.githack.com/](https://raw.githack.com/)  is being used to allow the below link to open `Doxygen_Documentation/html/index.html` from this repository.
-
-[HTML Documentation Webpage](https://raw.githack.com/mgh-GadzOOks/GadzOOks_CS_Console/master/Doxygen_Documentation/html/index.html)
-
+	- Starting point should be generic and scalable location: place to hold character. Detail should be added later, not required to start.
 
 > Written with [StackEdit](https://stackedit.io/).
