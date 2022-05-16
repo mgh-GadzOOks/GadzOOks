@@ -347,10 +347,26 @@ namespace GadzOOks
             clrScreen();
             restorePreviousState();
         }
-
+        /// <summary>
+        /// Any text that was on the current screen before swapping to a menu 
+        /// is saved with this.
+        /// </summary>
+        /// <param name="previousState"></param>
+        /// <returns>The string that is passed in so that it can be used after being saved.</returns>
         public string addToPreviousState(string previousState) { _previousState += previousState; return previousState; }
+        /// <summary>
+        /// For retrieving just the text of the previous state.
+        /// </summary>
+        /// <returns>Previous text state.</returns>
         public string getPreviousState() { return _previousState; }
+        /// <summary>
+        /// Clears the saved text of the previous screen.
+        /// </summary>
         public void clearPreviousState() { _previousState = ""; }
+        /// <summary>
+        /// Restores the previous screen's text to the specific section
+        /// where game text is supposed to be. (bottom of the screen)
+        /// </summary>
         public void restorePreviousState() { clrScreen(); Console.SetCursorPosition(0, 25);  Console.Write(_previousState); }
     }
 }
