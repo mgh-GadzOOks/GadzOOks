@@ -1,5 +1,7 @@
+
+
 # GadzOOks
-Object-oriented text-based adventure. My (Michael Hopper) personal project, designed to implement and combine a variety of programming concepts I know. Furthermore, as an opportunity to learn new concepts to solve problems, increase my understanding of C#, Github, and to have a practical practice for planning and documentation. Intention is not to have a designated end goal, but to be highly scalable, procedural and to continue adding features and complexity as desired. Created first as a console application to limit focus on UI and concentrate on code, objects, and logic, plan to create mobile app and windows form versions.
+Object-oriented text-based adventure. My (Michael Hopper) personal project, designed to implement and combine a variety of programming concepts I know. Furthermore, as an opportunity to learn new concepts to solve problems, increase my understanding of C#, Github, and to have practical practice for planning and documentation. Intention is not to have a designated end goal, but to be highly scalable, procedural and to continue adding features and complexity as desired. Created first as a console application to limit focus on UI and concentrate on code, objects, and logic; plan to create mobile app and windows form versions.
 
 > Updated 5/9/2022
 
