@@ -75,5 +75,7 @@ Text log (displayed by hitting "L" key after above text)
 	> 5/9/2022
 
 	- Starting point should be generic and scalable location: place to hold character. Detail should be added later, not required to start.
+	>6/15/2022
 
+	- Locations are created using an array of 2D arrays. Each 2D array is a coordinate based gird and is referred to as a layer. Each layer holds different information about the location for a particular grid coordinate. Currently, this is separated into: walls, textures, static objects, interactable objects, characters, and description layers.
 > Written with [StackEdit](https://stackedit.io/).
